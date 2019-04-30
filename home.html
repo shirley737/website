@@ -2,6 +2,7 @@
 	<head>
 		<title>Easy Stroll</title>
 		<meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1/">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	</head>
@@ -26,38 +27,49 @@
 				</header>     
 </section> 
 
+<div id="gap" > </div>   
+    
 <section id="banner1">
 				<header>
-					<h2>This is Overflow</h2>
+					<h2>Overview</h2>
 				</header>
+                <div class="video">
+                </div>    
 </section>
 
 <section id="banner2">
 				<header>
-					<h2>This is Overflow</h2>
+					<h2>Technology</h2>
 				</header>
 </section>
     
 <section id="banner3">
 				<header>
-					<h2>This is Overflow</h2>
+					<h2>Timeline</h2>
 				</header>
 </section>
     
 <section id="banner4">
 				<header>
-					<h2>This is Overflow</h2>
+					<h2>Demo</h2>
 				</header>
+        <div class="video" >
+                <img src="video.gif"  width=200% >
+        </div>
 </section>
-     
+    
+    
 <section id="footer">
-			<div >
-                <h3>&copy; Team Pi</h3>
-			</div>
+<div >
+        <h3>&copy; Team Pi</h3>
+</div>
 </section>     
-     
+    
 <style> 
-
+    html {
+    scroll-behavior: smooth;
+    }
+    
     body{
         margin: 0;
         padding: 0;
@@ -65,10 +77,14 @@
 		font-size: 25pt;
 		font-weight: 300;
 		letter-spacing: 1px;
-		text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25); 
+		text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+        background-image: linear-gradient(rgba(0, 151, 19, 0.2),rgba(0, 151, 19, 0))
     }
 
-
+#gap{
+     padding: 1em 0 1em 0;   
+    }
+    
 #header {
         font-family: 'Source Sans Pro', sans-serif;
 		position: relative;
@@ -88,7 +104,8 @@
 	}
   
 .container {
-  position: absolute;
+  position:absolute;
+  top:0;
   margin: 20px 50px;
   width: auto;
   z-index: 99;
@@ -127,36 +144,61 @@
 		position: relative;
 		color: #8e2828;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
-		text-align: center;
-		background: rgba(0, 151, 19, 0.2);
-		padding: 6em 0 6em 0;
-		margin: 0;
+		text-align: left;
+		background: rgba(0, 151, 19, 0);
+		padding: 8em 0 8em 0;
+		margin: 0 20px;
     }
 #banner1 header {
 			margin: 0 0 2em 0;
 		}
 
-			#banner1 header h2 {
+			h2 {
                 font-family: 'Source Sans Pro', sans-serif;
 				font-weight: 400;
 				font-size: 1.75em;
 				letter-spacing: 8px;
+                margin: 100px;
+                float: none;
 			}
 
 		   #banner1 p {
 			margin: 0;
 	} 
     
-#banner2, #banner3, #banner4 {
+#banner2{
+		position: relative;
+		color: rgba(40, 71, 142, 0.73);
+		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+		text-align: right;
+		background: rgba(0, 151, 19, 0.25);
+		padding: 6em 0 6em 0;
+		margin: 20px;
+    }
+    
+#banner3{
 		position: relative;
 		color: #8e2828;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
-		text-align: center;
-		background: rgba(0, 151, 19, 0.2);
+		text-align: left;
+		background: rgba(2, 96, 14, 0);
 		padding: 6em 0 6em 0;
-		margin: 20px auto;
+		margin: 20px;
     }
 
+#banner4{
+		position: relative;
+		color: #8e2828;
+		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+		text-align: right;
+		background: rgba(2, 96, 14, 0.67);
+		padding: 6em 0 6em 0;
+		margin: 20px;
+    }
+
+    #banner4 h2{
+        color:#fff;
+    }
 #footer {
 		position: relative;
 		color: #7f33b7;
@@ -166,36 +208,46 @@
 	}
 #footer h3 {
 				font-weight: 100;
-				font-size: 1em;
+				font-size: 0.8em;
 				letter-spacing: 2px;
                 color:dimgray;
                 margin:0;
-			}       
-   
-</style>     
+			}  
 
-<script>
-var sections = $('section')
-  , nav = $('nav')
-  , nav_height = nav.outerHeight();
- 
-$(window).on('scroll', function () {
-  var cur_pos = $(this).scrollTop();
- 
-  sections.each(function() {
-    var top = $(this).offset().top - nav_height,
-        bottom = top + $(this).outerHeight();
- 
-    if (cur_pos >= top && cur_pos <= bottom) {
-      nav.find('a').removeClass('active');
-      sections.removeClass('active');
- 
-      $(this).addClass('active');
-      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+.video{
+      float: left;
+      margin-top:-350px;
+      margin-left:100px;
+      z-index: 99;
     }
+   
+</style> 
+    
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
   });
 });
-    
-</script>   
+</script>
 </body>    
 </html>

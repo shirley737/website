@@ -22,23 +22,28 @@
      padding: 1em 0 1em 0;   
     }
 
-input.MyButton {
+.MyButton1, .MyButton2{
 font-family: 'Source Sans Pro', sans-serif;
 font-size:20px;
-position: relative;
-margin: 0 45%;
 width: 150px;
 padding: 10px;
-background: rgba(16, 129, 29, 0.8);
+margin:0px 10px;
+background: rgba(23, 132, 36, 0.59);
 color: #fff;
 border-radius: 10px;
 border-style: none;
 }
 
-input.MyButton:hover {
+.MyButton1:hover,.MyButton2:hover{
 color: #fff;
-background: rgba(124, 230, 136, 0.8);
+background: rgba(136, 230, 124, 0.8);
 border-style: none;
+}
+
+.buttons {
+    position: relative;
+    text-align: center;
+    color: #fff;
 }
 
 #header {

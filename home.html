@@ -31,10 +31,11 @@
 
 <div id="gap" > </div>   
 
-<form>
-<input class="MyButton" type="button" value="Github Link" onclick="window.location.href='https://github.com/tkafel/Design-Comp-2019'" />
-</form>
-    
+<div class="buttons">
+<button type="button" class="MyButton1" onclick="window.open('https://github.com/tkafel/Design-Comp-2019')">Github</button>
+<button type="button" class="MyButton2" onclick="window.open('https://docs.google.com/presentation/d/1qWp5YXy4hH4oO5mlKkbT9TMSrNKagtiIdOaUZKzyhr0/edit?usp=sharing')">Demo</button>
+</div>
+   
 <section id="banner1">
 				<header>
 					<h2>Overview</h2>
@@ -57,7 +58,7 @@
     
 <section id="banner4">
 				<header>
-					<h2>Our Demo</h2>
+					<h2>Customers say...</h2>
 				</header>
         <div class="video" >
         </div>
@@ -85,6 +86,15 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
+}
+</script>
+<script>
+function github(){
+    alert("hello");
+}
+    
+function demo{
+    
 }
 </script>
 </body>    

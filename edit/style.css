@@ -68,7 +68,7 @@ border-style: none;
         letter-spacing: 3px;
     }
 #container {
-  position:absolute;
+  position:fixed;
   top:0;
   margin: 20px 50px;
   width: auto;

@@ -166,6 +166,7 @@ margin-top:20px;
 margin-right:40px;
 line-height: 1.6; 
 font-style: italic;
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 .para3{
@@ -176,6 +177,7 @@ margin-left:100px;
 margin-right:40px;
 line-height: 1.6;
 color:#262a2a;
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -204,17 +206,18 @@ h2 {
 		color: rgba(40, 71, 142, 0.73);
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
 		text-align: right;
-        padding: 20px 0 8em 0;
+        padding: 10px 0 8em 0;
 		background: rgba(128, 190, 128, 0.47);
     }
 
 
 .row2 {
   display: flex;
+  flex-wrap: nowrap;
 }
 
 .column21 {
-  margin-left:100px;
+  margin-left:150px;
   width:200px;
   height:200px;
   background-color:darkgrey;
@@ -223,7 +226,7 @@ h2 {
 }
 
 .column22{
-  margin-left:350px;
+  margin-left:300px;
   width:200px;
   height:200px;
   background-color:darkgrey;
@@ -231,7 +234,8 @@ h2 {
 }
 
 .column23{
-  margin-left:350px;
+  margin-left:300px;
+  margin-right:100px;
   width:200px;
   height:200px;
   background-color:darkgrey;
@@ -258,9 +262,17 @@ max-width: 280px;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
 		text-align: left;
 		background: rgba(2, 96, 14, 0);
-		padding: 6em 0 6em 0;
-		margin: 20px;
+		padding: 0 0 0 0;
+        
     }
+
+#banner3 header{
+        margin-bottom:-40px;
+}
+
+#picture{
+  text-align: center;  
+}
 
 #banner4{
 		position: relative;
@@ -268,13 +280,16 @@ max-width: 280px;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
 		text-align: right;
 		background: rgba(71, 142, 71, 0.58);
-		padding: 5em 0 5em 0;
+		padding: 0 0 5em 0;
     }
 
 #banner4 h2{
         color:#fff;
 }
 
+#banner4 header{
+        padding-top:2px;
+}
 #footer {
 		position: relative;
 		color: #7f33b7;

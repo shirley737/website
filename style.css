@@ -244,17 +244,20 @@ h2 {
 
 #intro{
 margin-top:230px;
+margin-left:-70px;
 text-align: center;
 font-weight: bold;
 font-size: 30px;
+min-width: 350px;
 }
 
 #explain{
+margin-left:-50px;
 margin-top:20px;
 text-align: left;
-font-size: 20px;
+font-size: 18px;
 color:#6a6363;
-max-width: 280px;
+min-width: 350px;
 }
 #banner3{
 		position: relative;

@@ -281,9 +281,10 @@ min-width: 350px;
 		position: relative;
 		color: #8e2828;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
-		text-align: right;
 		background: rgba(71, 142, 71, 0.58);
 		padding: 0 0 5em 0;
+        height:10rem;
+       
     }
 
 #banner4 h2{
@@ -323,3 +324,32 @@ min-width: 350px;
       margin-right:100px;
       z-index: 99;
     }
+
+.ban4{
+  float: left;
+  width: 25%;
+}
+
+#ban4t{
+  position:relative;
+  top: 5rem;
+  right: 3rem;
+}
+
+.ban4p1{
+  width:30%;
+  height:30%;
+  position: relative;
+  right: -6.3rem;
+  bottom: 2.5rem;
+  
+}
+
+.ban4p2{
+  width: 45%;
+  height:45%;
+  position: relative;
+  right: 2rem;
+  bottom: -9rem;
+  
+}

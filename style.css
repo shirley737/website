@@ -279,11 +279,12 @@ min-width: 350px;
 
 #banner4{
 		position: relative;
+        text-align: right;
 		color: #8e2828;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
 		background: rgba(71, 142, 71, 0.58);
-		padding: 0 0 5em 0;
-        height:10rem;
+		padding: 10px 0 8em 0;
+        height:10em;
        
     }
 
@@ -292,7 +293,26 @@ min-width: 350px;
 }
 
 #banner4 header{
-        padding-top:2px;
+			margin: 0 0 0 0;
+}
+
+.row4 {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.column41 {
+  text-align: center;
+  margin-left:28%;
+  width:200px;
+  height:300px;
+}
+
+.column42{
+  text-align: center;
+  margin-left:300px;
+  width:200px;
+  height:300px;
 }
 #footer {
 		position: relative;

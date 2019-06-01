@@ -1,12 +1,12 @@
-<?php
- 
+<?php 
+require_once("styles.css");
 if($_POST) {
     $visitor_name = "";
     $visitor_email = "";
     $email_title = "";
     $concerned_department = "";
     $visitor_message = "";
-     
+    
     if(isset($_POST['visitor_name'])) {
         $visitor_name = filter_var($_POST['visitor_name'], FILTER_SANITIZE_STRING);
     }
@@ -39,5 +39,4 @@ if($_POST) {
 } else {
     echo '<p>Something went wrong</p>';
 }
- 
 ?>
